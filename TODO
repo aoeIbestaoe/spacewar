@@ -1,0 +1,109 @@
+****************************   v0.1
+ Solar systems and planets:
+ - look at different systems
+ - look at different planets
+ 
+ Game:
+ - Select race to begin with
+ 
+ ***** CURRENT
+ 
+****************************   v0.2
+ Production:
+  - Production possible of various buildings (based on different planets?)
+ 
+ Game:
+ - Implement currency
+   * Taxes based on people and planet
+   * Cost of military: creation and maintenance
+ - Implement turn system
+   * Turns to create stuff
+   * Option to end turn in menu
+ - Design buildings functionality
+     
+****************************   v0.3
+ Production:
+ - Create ships (bomber, fighter, transport) based on buildings
+ - Create troops on planet (troops)
+ 
+ Game:
+ - Design different buildings
+ 
+ Implementation:
+ - Think of a better menu structure.
+
+****************************   v0.4
+ Game: 
+ - Research (provides various bonuses, terraforming or...)
+ 
+ Implementation
+ - Improve visuals
+
+****************************   v0.5
+ Game
+ - Introduce traveling to other planets in system
+ - Fighting: between fleets, sieges of planets
+ - Planet defences
+ 
+****************************   v0.6
+ Game
+ - Create bonusses/terrains based on planet or race
+ - Create structures based in race
+ 
+****************************   v0.7
+ Game
+ - Space travel to other systems
+
+ 
+****************************   v0.8
+ Game
+ - Implement AI
+ 
+****************************   v0.9
+ Game
+ - save and load of game
+ - Data in database
+ 
+ Others
+ - Release Beta
+ - Create Website
+ - Make it a git project   
+
+****************************   v1.0 
+ Game
+ - Polish game 
+ 
+ Others
+ - Release standard
+ 
+ ****************************   Future
+ Planets exist out of regions
+ Command of regions
+ Leader of planet, system
+ bonusses
+ planetairy destruction/creation
+ Destruction of system by destroying sun (and preventing it)
+ Scanners for detecting movement in planet, system
+ Network play
+ factions and diplomacy
+ merge
+ More gui
+ even more sub or sup regions
+ evil aggresive ai outbreaks (alien virus?)
+ tests
+ 
+ ****************************   Blackboard
+ buildings:
+ civil/military
+ farm, science lab, scanner, baracks, spaceport, shields, anti space turrets, missle silo, photon canon
+ fighters, bombers, capital ships (space travel) troopships, terraform ships, ...
+ credits stored on (capital) planet? ship to move it?
+ ships on planet, in atmosphere, ...
+ terraform
+ differences between races
+ fleets and fleet names
+ commanders of fleet with special bonusses
+ death star
+ planet rebuild to weapon
+ comets
+ power plants with revenue <-> distance to sun
