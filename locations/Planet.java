@@ -3,21 +3,21 @@ package locations;
 import java.math.BigInteger;
 import java.util.ArrayList;
 
-import buildings.building;
-import locations.resource.resourceType;
-import races.race;
+import buildings.Building;
+import locations.Resource.resourceType;
+import races.Race;
 
-public class planet {
+public class Planet {
 
     private String name;
     private int id;
     private BigInteger inhabitans;
     private resourceType rt;
-    private race owner;
+    private Race owner;
     private BigInteger dFS;
-    private ArrayList<building> buildings;
+    private ArrayList<Building> buildings;
     
-    public planet(String name, int id, BigInteger inhabitans, resourceType rt, race owner, BigInteger dFS) {
+    public Planet(String name, int id, BigInteger inhabitans, resourceType rt, Race owner, BigInteger dFS) {
         this.name = name;
         this.id = id;
         this.inhabitans = inhabitans;
@@ -58,11 +58,11 @@ public class planet {
         this.rt = rt;
     }
 
-    public race getOwner() {
+    public Race getOwner() {
         return owner;
     }
 
-    public void setOwner(race owner) {
+    public void setOwner(Race owner) {
         this.owner = owner;
     }
 
@@ -78,11 +78,11 @@ public class planet {
         return getName() + ", owned by " + getOwner().getName() + " with " + getInhabitans().toString() + " inhabitans. \n      "+ getdFS() +  " km from the sun and its resourcetype is " + getRt();
     }
     
-    public void addBuilding(building b) {
+    public void addBuilding(Building b) {
         buildings.add(b);
     }
     
-    public building getBuilding(int i) {
+    public Building getBuilding(int i) {
         return buildings.get(i);
     }
 }

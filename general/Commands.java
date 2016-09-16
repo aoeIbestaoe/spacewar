@@ -1,11 +1,11 @@
 package general;
 
-public class commands {
+public class Commands {
 
     int stage;
     String[] commands;
     
-    public commands(int stage, String[] commands) {
+    public Commands(int stage, String[] commands) {
         this.stage = stage;
         this.commands = commands;
     }

@@ -2,14 +2,14 @@ package races;
 
 import java.awt.Color;
 
-public class race {
+public class Race {
 
     private String name;
     private int id;
     private Color color;
     private Integer wealth;
     
-    public race(String name, int id, Color color) {
+    public Race(String name, int id, Color color) {
         this.name = name;
         this.id = id;
         this.color = color;

@@ -1,9 +1,9 @@
 package ships;
 
-public class bomber extends ship {
+public class Bomber extends Ship {
 
     
-    public bomber() {
+    public Bomber() {
         super("bomber", 300, 1, 5, 10, 3, 2, 10, 0);
         
     }

@@ -1,6 +1,6 @@
 package ships;
 
-public class ship {
+public class Ship {
 
     String name;
     int cost;
@@ -14,7 +14,7 @@ public class ship {
     int capacity;
     int currentHp;
     
-    public ship(String name, int cost, int buildTime, int maintenanceCost, int bombStrength, int attackStrength, int defence, int hitpoints, int capacity) {
+    public Ship(String name, int cost, int buildTime, int maintenanceCost, int bombStrength, int attackStrength, int defence, int hitpoints, int capacity) {
         currentHp = hitpoints;
     }
 }

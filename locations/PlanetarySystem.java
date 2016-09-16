@@ -2,17 +2,17 @@ package locations;
 
 import java.util.ArrayList;
 
-public class system {
+public class PlanetarySystem {
 
     private String name;
     private int id;
-    private ArrayList<planet> planets;
+    private ArrayList<Planet> planets;
     private int x;
     private int y;
     private int z;
     
     
-    public system(String name, int id, int x, int y, int z) {
+    public PlanetarySystem(String name, int id, int x, int y, int z) {
         this.name = name;
         this.id = id;
         this.x = x;
@@ -37,11 +37,11 @@ public class system {
         this.id = id;
     }
 
-    public ArrayList<planet> getPlanets() {
+    public ArrayList<Planet> getPlanets() {
         return planets;
     }
 
-    public void setPlanets(ArrayList<planet> planets) {
+    public void setPlanets(ArrayList<Planet> planets) {
         this.planets = planets;
     }
 
@@ -69,7 +69,7 @@ public class system {
         this.z = z;
     }
 
-    public void addPlanet(planet p) {
+    public void addPlanet(Planet p) {
         planets.add(p);
     }
 

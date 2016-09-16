@@ -1,14 +1,16 @@
 package buildings;
 
-public class building {
+public class Building {
 
     String name;
     int cost;
     int buildTime;
+    String description;
     
-    public building(String name, int cost, int buildTime) {
+    public Building(String name, int cost, int buildTime, String description) {
         this.name = name;
         this.cost = cost;
         this.buildTime = buildTime;
+        this.description = description;
     }
 }

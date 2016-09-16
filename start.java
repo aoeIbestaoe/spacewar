@@ -1,4 +1,4 @@
-import general.game;
+import general.Game;
 
 /**
  * 
@@ -10,7 +10,7 @@ import general.game;
 public class start {
 
     public static void main(String[] args) {
-        game g = new game();
+        Game g = new Game();
         g.start();
 
     }

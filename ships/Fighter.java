@@ -1,8 +1,8 @@
 package ships;
 
-public class fighter extends ship {
+public class Fighter extends Ship {
 
-    public fighter() {
+    public Fighter() {
         super("fighter", 250, 1, 4, 2, 6, 3, 8, 0);
     }
 }

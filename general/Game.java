@@ -6,24 +6,24 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import database.database;
-import locations.planet;
-import locations.system;
-import locations.resource.resourceType;
-import races.race;
+import database.Database;
+import locations.Planet;
+import locations.PlanetarySystem;
+import locations.Resource.resourceType;
+import races.Race;
 
-public class game {
+public class Game {
 
-    database db = new database();
-    race player;
-    system activeSystem;
-    planet activePlanet;
+    Database db = new Database();
+    Race player;
+    PlanetarySystem activeSystem;
+    Planet activePlanet;
     Scanner in = new Scanner(System.in);
     
     int stage;
     HashMap<Integer, ArrayList<String>> commands;
     
-    public game() {
+    public Game() {
         db.initialise();
         initialise();
         
@@ -38,28 +38,28 @@ public class game {
     }
 
     private void createSystems() {
-        db.addSystem(new system("Solar System", 0, 5, 5, 5));
+        db.addSystem(new PlanetarySystem("Solar System", 0, 5, 5, 5));
         
     }
 
     private void createRaces() {
-        db.addRace(new race("neutral", 0, Color.BLACK));
-        db.addRace(new race("Terrans", 1, Color.BLUE));
-        db.addRace(new race("Borg", 2, Color.RED));
-        db.addRace(new race("Insectmen", 3, Color.GREEN));
+        db.addRace(new Race("neutral", 0, Color.BLACK));
+        db.addRace(new Race("Terrans", 1, Color.BLUE));
+        db.addRace(new Race("Borg", 2, Color.RED));
+        db.addRace(new Race("Insectmen", 3, Color.GREEN));
     }
 
     private void createPlanets() {
-        system s0 = db.getSystem(0);
-        s0.addPlanet(new planet("Mercurius", 1, new BigInteger("6000"), resourceType.IRON, db.getRace(0), new BigInteger("57910000")));
-        s0.addPlanet(new planet("Venus", 2, new BigInteger("900000"), resourceType.IRON, db.getRace(0), new BigInteger("108200000")));
-        s0.addPlanet(new planet("Earth", 3, new BigInteger("60000000000"), resourceType.IRON, db.getRace(1), new BigInteger("149600000")));
-        s0.addPlanet(new planet("Mars", 4, new BigInteger("2000000000"), resourceType.SILICON, db.getRace(0), new BigInteger("227940000")));
-        s0.addPlanet(new planet("Saturn", 5, new BigInteger("9000"), resourceType.GAS, db.getRace(0), new BigInteger("778330000")));
-        s0.addPlanet(new planet("Jupiter", 6, new BigInteger("30000000000"), resourceType.GAS, db.getRace(3), new BigInteger("1424600000")));
-        s0.addPlanet(new planet("Uranus", 7, new BigInteger("600"), resourceType.CRYSTAL, db.getRace(0), new BigInteger("2873550000")));
-        s0.addPlanet(new planet("Neptune", 8, new BigInteger("400"), resourceType.WATER, db.getRace(0), new BigInteger("4501000000")));
-        s0.addPlanet(new planet("Pluto", 9, new BigInteger("7000"), resourceType.ICE, db.getRace(2), new BigInteger("5945900000")));
+        PlanetarySystem s0 = db.getSystem(0);
+        s0.addPlanet(new Planet("Mercurius", 1, new BigInteger("6000"), resourceType.IRON, db.getRace(0), new BigInteger("57910000")));
+        s0.addPlanet(new Planet("Venus", 2, new BigInteger("900000"), resourceType.IRON, db.getRace(0), new BigInteger("108200000")));
+        s0.addPlanet(new Planet("Earth", 3, new BigInteger("60000000000"), resourceType.IRON, db.getRace(1), new BigInteger("149600000")));
+        s0.addPlanet(new Planet("Mars", 4, new BigInteger("2000000000"), resourceType.SILICON, db.getRace(0), new BigInteger("227940000")));
+        s0.addPlanet(new Planet("Saturn", 5, new BigInteger("9000"), resourceType.GAS, db.getRace(0), new BigInteger("778330000")));
+        s0.addPlanet(new Planet("Jupiter", 6, new BigInteger("30000000000"), resourceType.GAS, db.getRace(3), new BigInteger("1424600000")));
+        s0.addPlanet(new Planet("Uranus", 7, new BigInteger("600"), resourceType.CRYSTAL, db.getRace(0), new BigInteger("2873550000")));
+        s0.addPlanet(new Planet("Neptune", 8, new BigInteger("400"), resourceType.WATER, db.getRace(0), new BigInteger("4501000000")));
+        s0.addPlanet(new Planet("Pluto", 9, new BigInteger("7000"), resourceType.ICE, db.getRace(2), new BigInteger("5945900000")));
     }
 
     private void createCommands() {
@@ -156,7 +156,7 @@ public class game {
         Boolean ok = false;
         while (!ok) {
             String input = in.nextLine();
-            planet p = db.lookupPlanet(input, activeSystem);
+            Planet p = db.lookupPlanet(input, activeSystem);
             if (p != null) {
                 activePlanet = p;
                 if (p.getOwner() == player) {
@@ -199,7 +199,7 @@ public class game {
                     ok2 = false;
                 }
              }
-            system s = db.getSystem(id);
+            PlanetarySystem s = db.getSystem(id);
             if (s != null) {
                 activeSystem = s;
                 stage = 1;
@@ -260,7 +260,7 @@ public class game {
     }
 
     private void showPlanetsInActiveSystem() {
-        for (planet p: db.getSystem(activeSystem.getId()).getPlanets()) {
+        for (Planet p: db.getSystem(activeSystem.getId()).getPlanets()) {
             System.out.println(p.getName());
         }
         stage = 1;
@@ -269,7 +269,7 @@ public class game {
     
     private void showOwnedPlanetsInActiveSystem() {
         Boolean output = false;
-        for (planet p: db.getSystem(activeSystem.getId()).getPlanets()) {
+        for (Planet p: db.getSystem(activeSystem.getId()).getPlanets()) {
             if (p.getOwner() == player) {
                 System.out.println(p.getName());
                 output = true;
@@ -297,14 +297,14 @@ public class game {
         Boolean ok = false;
         
         System.out.println("Which race do you want to be? Select one of the following:");
-        for (race r : db.getRaces()) {
+        for (Race r : db.getRaces()) {
             if (!r.getName().equals("neutral")) {
                 System.out.println(r.getName());
             }
         }
         while (!ok) {
             input = in.nextLine();
-            for (race r : db.getRaces()) {
+            for (Race r : db.getRaces()) {
                 if (r.getName().equals(input) && !r.getName().equals("neutral")) {
                     player = r;
                     ok = true;

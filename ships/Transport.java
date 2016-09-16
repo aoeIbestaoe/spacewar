@@ -1,8 +1,8 @@
 package ships;
 
-public class transport extends ship {
+public class Transport extends Ship {
 
-    public transport() {
+    public Transport() {
         super("transport", 200, 1, 2, 0, 1, 1, 5, 500);
     }
 
