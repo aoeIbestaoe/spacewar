@@ -1,4 +1,4 @@
-package spacewar.locations;
+package locations;
 
 public class resource {
 

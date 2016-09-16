@@ -1,4 +1,4 @@
-package spacewar.general;
+package general;
 
 public class commands {
 

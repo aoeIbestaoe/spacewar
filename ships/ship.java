@@ -1,4 +1,4 @@
-package spacewar.ships;
+package ships;
 
 public class ship {
 

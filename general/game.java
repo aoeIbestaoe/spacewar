@@ -1,17 +1,16 @@
-package spacewar.general;
+package general;
 
 import java.awt.Color;
 import java.math.BigInteger;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import spacewar.database.database;
-import spacewar.locations.planet;
-import spacewar.locations.system;
-import spacewar.locations.resource.resourceType;
-import spacewar.races.race;
+import database.database;
+import locations.planet;
+import locations.system;
+import locations.resource.resourceType;
+import races.race;
 
 public class game {
 

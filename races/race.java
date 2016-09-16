@@ -1,4 +1,4 @@
-package spacewar.races;
+package races;
 
 import java.awt.Color;
 

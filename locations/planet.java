@@ -1,11 +1,11 @@
-package spacewar.locations;
+package locations;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 
-import spacewar.buildings.building;
-import spacewar.locations.resource.resourceType;
-import spacewar.races.race;
+import buildings.building;
+import locations.resource.resourceType;
+import races.race;
 
 public class planet {
 

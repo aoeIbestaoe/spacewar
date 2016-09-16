@@ -1,12 +1,12 @@
-package spacewar.database;
+package database;
 
 import java.util.ArrayList;
 
-import spacewar.buildings.barracks;
-import spacewar.buildings.building;
-import spacewar.locations.planet;
-import spacewar.locations.system;
-import spacewar.races.race;
+import buildings.barracks;
+import buildings.building;
+import locations.planet;
+import locations.system;
+import races.race;
 
 public class database {
 

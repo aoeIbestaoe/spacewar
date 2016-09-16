@@ -1,4 +1,4 @@
-package spacewar.locations;
+package locations;
 
 import java.util.ArrayList;
 

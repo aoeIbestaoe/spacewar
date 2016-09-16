@@ -1,4 +1,4 @@
-package spacewar.buildings;
+package buildings;
 
 public class barracks extends building {
 

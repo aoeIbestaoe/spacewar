@@ -1,6 +1,4 @@
-package spacewar;
-
-import spacewar.general.game;
+import general.game;
 
 /**
  * 
